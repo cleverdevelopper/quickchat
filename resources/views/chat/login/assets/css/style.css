@@ -1,0 +1,228 @@
+:root{
+    --white-color: #ffff;
+    --blue-color: #1677FF;
+    --background-color: rgb(250, 250, 251);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Public Sans", sans-serif;
+    background-color: rgb(250, 250, 251)
+}
+
+.login__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container .login__logo{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.login__container .login__logo h3{
+    margin: 100px;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+
+
+.login__container .login__card{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__container .login__card .card{
+    width: 40%;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    color: rgb(38, 38, 38);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    overflow: hidden;
+    position: relative;
+    border: none rgb(230, 235, 241);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+    padding: 20px;
+}
+
+.login__card .card .card__title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 24px;
+}
+
+.login__card .card .card__title h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.login__card .card .card__title a{
+    text-decoration: none;
+    color: var(--blue-color);
+    font-weight: 300;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__card .card  .card__form{
+    width: 100%;
+    padding: 10px 24px 24px 24px;
+}
+
+.card  .card__form .form__group{
+    width: 100%;
+}
+
+.card  .card__form .form__group .label{
+    padding-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 1.4375em;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    display: block;
+    transform-origin: left top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    color: rgb(89, 89, 89);
+}
+
+.card  .card__form .form__group .form__group__12{
+    width: 100%;
+}
+
+.card__form .form__group .form__group__12 input{
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentcolor;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 5px;
+    box-sizing: content-box;
+    height: 1.2em;
+    margin-bottom: 20px;
+    display: block;
+    min-width: 0px;
+    width: 94%;
+    padding: 10.5px 14px 10.5px 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+.card__form .form__group .form__group__12 input:hover{
+    border: 1px solid var(--blue-color);
+    transition: .3s ease;
+}
+
+.card  .card__form .form__save{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__form .form__save .keep__password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__form .form__save .keep__password p{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.card__form .form__save .forgot__password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+}
+
+.card__form .form__save .forgot__password a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #262626;
+} 
+
+.card__form .form__save .forgot__password a:hover{
+    text-decoration: underline;
+}
+
+.card  .card__form .form__group__button{
+    width: 100%;
+}
+
+.card  .card__form .form__group__button .btn{
+    margin-top: 40px;
+    font: inherit;
+    border: 1px solid var(--blue-color);
+    border-radius: 5px;
+    box-sizing: content-box;
+    height: 1.2em;
+    display: block;
+    min-width: 0px;
+    width: 94%;
+    padding: 10.5px 14px 10.5px 12px;
+    font-size: 15px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+
+
+.login__container .login__footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px
+}
+
+.login__container .login__footer .footer__policy p{
+    font-size: 12px;
+    color: rgb(89, 89, 89);
+    font-weight: 400;
+}
+
+.login__container .login__footer .footer__policy a{
+    text-decoration: none;
+    color: var(--blue-color);
+}
+
+.login__container .login__footer .footer__policy a:hover{
+    text-decoration: underline;
+}
+
+.login__container .login__footer  .footer__links a{
+    padding-right: 20px;
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login__container .login__footer  .footer__links a:hover{
+    text-decoration: underline;
+}

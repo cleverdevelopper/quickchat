@@ -1,0 +1,8 @@
+{
+    "name" : "quickchat/quickchat",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
