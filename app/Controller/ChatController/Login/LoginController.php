@@ -2,7 +2,7 @@
     namespace App\Controller\ChatController\Login;
     use App\Model\ChatEntity\Utilizador as UserEntity;
     use App\Utils\ViewManager;
-    //use \App\Session\Login\LoginSession as  SessionAdminLogin;
+    use \App\Session\Login\LoginSession as  SessionAdminLogin;
     use App\Controller\Alert;
 
     class LoginController extends PageController{
@@ -27,18 +27,18 @@
                 return self::getLoginPage($request, 'Dados de login invalidos.' );
             }
 
-            if(md5($password) != $objUtilizador->palavra_passe){
+            if(md5($password) != $objUtilizador->senha){
                 return self::getLoginPage($request, 'Dados de login invalidos.' );
             }
 
-            //SessionAdminLogin::login($objUtilizador);
+            SessionAdminLogin::login($objUtilizador);
 
-            $request->getRouter()->redirect('/dashboard');
+            $request->getRouter()->redirect('/chat');
         }
 
         public static function setLogout($request){
-            //SessionAdminLogin::logout();
-            $request->getRouter()->redirect('/login');
+            SessionAdminLogin::logout();
+            $request->getRouter()->redirect('/');
         }
 
     }
